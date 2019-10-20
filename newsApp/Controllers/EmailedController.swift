@@ -9,17 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-//	@IBAction func emailedButton(_ sender: UIButton) {
-//		currentNewsType = "emailed"
-//	}
-//	@IBAction func sharedButton(_ sender: UIButton) {
-//		currentNewsType = "shared"
-//	}
-//	@IBAction func viewedButton(_ sender: UIButton) {
-//		currentNewsType = "viewed"
-//	}
+class EmailedController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	@IBOutlet weak var newsTableView: UITableView!
 	
@@ -76,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "EmailedCell", for: indexPath) as! NewsCell
 		let newsNode = articles[indexPath.row]
 		cell.articleTitle = newsNode.title
 		cell.articleImageUrl = newsNode.imageUrl
@@ -99,8 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //		let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
 //
 //		}
-//		let swipeAction = UISwipeActionsConfiguration(actions: <#T##[UIContextualAction]#>)
+//		let swipeAction = UISwipeActionsConfiguration(actions: )
 //	}
-
 }
 
