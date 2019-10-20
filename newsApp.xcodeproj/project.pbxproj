@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		A6C8C3AD235C8FFE00FDF583 /* newsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3AB235C8FFE00FDF583 /* newsApp.xcdatamodeld */; };
 		A6C8C3AF235C900100FDF583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C8C3AE235C900100FDF583 /* Assets.xcassets */; };
 		A6C8C3B2235C900100FDF583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C8C3B0235C900100FDF583 /* LaunchScreen.storyboard */; };
+		A6C8C3BA235C921F00FDF583 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3B9235C921F00FDF583 /* NewsCell.swift */; };
+		A6C8C3BC235C935900FDF583 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3BB235C935900FDF583 /* RequestManager.swift */; };
+		A6C8C3BE235C937200FDF583 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3BD235C937200FDF583 /* Model.swift */; };
+		A6C8C3C0235C947F00FDF583 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3BF235C947F00FDF583 /* CoreDataStack.swift */; };
 		FEA1CC0ACBADE05EDC06FF0D /* Pods_newsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8DF9CC6FF6EE51505F7ACC /* Pods_newsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		A6C8C3AE235C900100FDF583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6C8C3B1235C900100FDF583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6C8C3B3235C900100FDF583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C8C3B9235C921F00FDF583 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A6C8C3BB235C935900FDF583 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		A6C8C3BD235C937200FDF583 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A6C8C3BF235C947F00FDF583 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +58,6 @@
 				10965B0CA36020E36D212703 /* Pods-newsApp.debug.xcconfig */,
 				7D398933718A1A0893661348 /* Pods-newsApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,7 +92,11 @@
 			children = (
 				A6C8C3A2235C8FFE00FDF583 /* AppDelegate.swift */,
 				A6C8C3A4235C8FFE00FDF583 /* SceneDelegate.swift */,
+				A6C8C3BF235C947F00FDF583 /* CoreDataStack.swift */,
 				A6C8C3A6235C8FFE00FDF583 /* ViewController.swift */,
+				A6C8C3BB235C935900FDF583 /* RequestManager.swift */,
+				A6C8C3BD235C937200FDF583 /* Model.swift */,
+				A6C8C3B9235C921F00FDF583 /* NewsCell.swift */,
 				A6C8C3A8235C8FFE00FDF583 /* Main.storyboard */,
 				A6C8C3AE235C900100FDF583 /* Assets.xcassets */,
 				A6C8C3B0235C900100FDF583 /* LaunchScreen.storyboard */,
@@ -210,10 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6C8C3BE235C937200FDF583 /* Model.swift in Sources */,
 				A6C8C3A7235C8FFE00FDF583 /* ViewController.swift in Sources */,
 				A6C8C3A3235C8FFE00FDF583 /* AppDelegate.swift in Sources */,
 				A6C8C3AD235C8FFE00FDF583 /* newsApp.xcdatamodeld in Sources */,
+				A6C8C3BC235C935900FDF583 /* RequestManager.swift in Sources */,
 				A6C8C3A5235C8FFE00FDF583 /* SceneDelegate.swift in Sources */,
+				A6C8C3BA235C921F00FDF583 /* NewsCell.swift in Sources */,
+				A6C8C3C0235C947F00FDF583 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
