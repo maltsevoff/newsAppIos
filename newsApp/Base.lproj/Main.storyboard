@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Emailed Controller-->
+        <!--Emailed-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmailedController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,14 +91,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" id="CYN-pq-8kE"/>
+                    <tabBarItem key="tabBarItem" title="Emailed" id="CYN-pq-8kE"/>
                     <connections>
                         <outlet property="newsTableView" destination="52V-B8-AlM" id="f4i-n8-UAR"/>
+                        <segue destination="L2m-4u-cDN" kind="show" identifier="ShowCellDetails" id="YNA-0j-QuC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213" y="-554"/>
+            <point key="canvasLocation" x="1212" y="-562"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vLF-Uq-7U2">
@@ -207,11 +208,55 @@
                     <tabBarItem key="tabBarItem" title="Shared" id="2gy-Kk-7S5"/>
                     <connections>
                         <outlet property="newsTableView" destination="qlg-1B-Jmk" id="tCe-To-fd5"/>
+                        <segue destination="L2m-4u-cDN" kind="show" identifier="ShowCellDetails" id="HOy-bq-oQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqP-Fu-hX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1212" y="143"/>
+        </scene>
+        <!--Article Controller-->
+        <scene sceneID="DSz-Wu-0Lb">
+            <objects>
+                <viewController id="L2m-4u-cDN" customClass="ArticleController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mt0-r5-LOD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC4-Jl-JGu">
+                                <rect key="frame" x="352" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szy-YK-bqf">
+                                <rect key="frame" x="50" y="54" width="314" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Szy-YK-bqf" firstAttribute="top" secondItem="TC4-Jl-JGu" secondAttribute="bottom" constant="13" id="Cdh-ig-fvt"/>
+                            <constraint firstItem="TC4-Jl-JGu" firstAttribute="top" secondItem="Gfz-Nt-SfQ" secondAttribute="top" constant="20" id="KMF-S7-BqK"/>
+                            <constraint firstItem="TC4-Jl-JGu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Gfz-Nt-SfQ" secondAttribute="leading" constant="352" id="SDT-5T-2xn"/>
+                            <constraint firstItem="Gfz-Nt-SfQ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Szy-YK-bqf" secondAttribute="trailing" constant="50" id="dFf-JS-5Ny"/>
+                            <constraint firstItem="Gfz-Nt-SfQ" firstAttribute="trailing" secondItem="TC4-Jl-JGu" secondAttribute="trailing" constant="20" id="hRC-6q-Lua"/>
+                            <constraint firstItem="Szy-YK-bqf" firstAttribute="leading" secondItem="Gfz-Nt-SfQ" secondAttribute="leading" constant="50" id="p0Q-e2-g76"/>
+                            <constraint firstItem="Szy-YK-bqf" firstAttribute="centerX" secondItem="Gfz-Nt-SfQ" secondAttribute="centerX" id="t0C-we-Ulr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gfz-Nt-SfQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hwJ-2X-7Er"/>
+                    <connections>
+                        <outlet property="articleDateLabel" destination="TC4-Jl-JGu" id="k4W-G5-BdR"/>
+                        <outlet property="articleTitleLabel" destination="Szy-YK-bqf" id="2zK-lF-4Oz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAl-CF-dtt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885.507246376812" y="142.63392857142856"/>
         </scene>
         <!--Viewed-->
         <scene sceneID="YsL-9j-LNb">
@@ -300,6 +345,7 @@
                     <tabBarItem key="tabBarItem" title="Viewed" id="VsX-dE-XzY"/>
                     <connections>
                         <outlet property="newsTableView" destination="pt9-Xn-fx4" id="Yay-ka-pUj"/>
+                        <segue destination="L2m-4u-cDN" kind="show" identifier="ShowCellDetails" id="g6J-Q2-XOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="md6-Bn-RNo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -307,4 +353,7 @@
             <point key="canvasLocation" x="1212" y="840"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="g6J-Q2-XOp"/>
+    </inferredMetricsTieBreakers>
 </document>
