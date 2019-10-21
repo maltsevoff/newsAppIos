@@ -18,6 +18,7 @@ struct News {
 }
 
 var articles: [News] = []
+var favouriteArticles: [News] = []
 
 func imagesForArticle(index: Int) -> [String] {
 	var images: [String] = []

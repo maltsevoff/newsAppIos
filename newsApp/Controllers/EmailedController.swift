@@ -51,8 +51,9 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
-			
-			print("pressed action favourite")
+			let favouriteCell = articles[indexPath.row]
+			favouriteArticles.append(favouriteCell)
+			print("pressed action favourite", favouriteArticles)
 		}
 		let swipeAction = UISwipeActionsConfiguration(actions: [contextAction])
 		return swipeAction
