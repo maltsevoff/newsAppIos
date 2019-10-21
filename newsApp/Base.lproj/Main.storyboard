@@ -235,13 +235,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gyf-CM-nFC">
+                                <rect key="frame" x="0.0" y="95" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="66" id="Bef-dI-VVC" customClass="ImageCell" customModule="newsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bef-dI-VVC" id="MQI-5u-inS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="L2m-4u-cDN" id="vxt-MJ-QE8"/>
+                                    <outlet property="delegate" destination="L2m-4u-cDN" id="NjV-zu-neQ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Gyf-CM-nFC" firstAttribute="trailing" secondItem="Gfz-Nt-SfQ" secondAttribute="trailing" id="3ZA-HG-zfL"/>
                             <constraint firstItem="Szy-YK-bqf" firstAttribute="top" secondItem="TC4-Jl-JGu" secondAttribute="bottom" constant="13" id="Cdh-ig-fvt"/>
+                            <constraint firstItem="Gyf-CM-nFC" firstAttribute="leading" secondItem="Gfz-Nt-SfQ" secondAttribute="leading" id="Ggx-ha-Ekj"/>
                             <constraint firstItem="TC4-Jl-JGu" firstAttribute="top" secondItem="Gfz-Nt-SfQ" secondAttribute="top" constant="20" id="KMF-S7-BqK"/>
                             <constraint firstItem="TC4-Jl-JGu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Gfz-Nt-SfQ" secondAttribute="leading" constant="352" id="SDT-5T-2xn"/>
+                            <constraint firstItem="Gyf-CM-nFC" firstAttribute="top" secondItem="Szy-YK-bqf" secondAttribute="bottom" constant="20.5" id="bR1-ub-Hv6"/>
                             <constraint firstItem="Gfz-Nt-SfQ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Szy-YK-bqf" secondAttribute="trailing" constant="50" id="dFf-JS-5Ny"/>
+                            <constraint firstAttribute="bottom" secondItem="Gyf-CM-nFC" secondAttribute="bottom" id="g16-E7-Ga8"/>
                             <constraint firstItem="Gfz-Nt-SfQ" firstAttribute="trailing" secondItem="TC4-Jl-JGu" secondAttribute="trailing" constant="20" id="hRC-6q-Lua"/>
                             <constraint firstItem="Szy-YK-bqf" firstAttribute="leading" secondItem="Gfz-Nt-SfQ" secondAttribute="leading" constant="50" id="p0Q-e2-g76"/>
                             <constraint firstItem="Szy-YK-bqf" firstAttribute="centerX" secondItem="Gfz-Nt-SfQ" secondAttribute="centerX" id="t0C-we-Ulr"/>
@@ -252,6 +274,7 @@
                     <connections>
                         <outlet property="articleDateLabel" destination="TC4-Jl-JGu" id="k4W-G5-BdR"/>
                         <outlet property="articleTitleLabel" destination="Szy-YK-bqf" id="2zK-lF-4Oz"/>
+                        <outlet property="imagesTableView" destination="Gyf-CM-nFC" id="iB7-4D-VVc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAl-CF-dtt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
