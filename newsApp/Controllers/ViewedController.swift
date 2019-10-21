@@ -49,10 +49,13 @@ class ViewedController: NewsClass, UITableViewDataSource, UITableViewDelegate {
 		return true
 	}
 
-	//	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-	//		let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
-	//
-	//		}
-	//		let swipeAction = UISwipeActionsConfiguration(actions: )
-	//	}
+		func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+			let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
+				let favouriteCell = articles[indexPath.row]
+				favouriteArticles.append(favouriteCell)
+				print("pressed action favourite", favouriteArticles)
+			}
+			let swipeAction = UISwipeActionsConfiguration(actions: [contextAction])
+			return swipeAction
+		}
 	}
