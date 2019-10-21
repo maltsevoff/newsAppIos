@@ -14,7 +14,6 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 	@IBOutlet weak var newsTableView: UITableView!
 	
 	let currentNewsType = "emailed"
-	var selectedCell: Int?
 	var context: NSManagedObjectContext?
 	
 	override func viewDidLoad() {
@@ -22,13 +21,6 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 		
 		navigationItem.title = "News"
 		getActualNews(newsTableView: newsTableView, newsType: currentNewsType)
-	}
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "ShowCellDetails" {
-			let destination = segue.destination as! ArticleController
-			destination.articleNumber = selectedCell
-		}
 	}
 	
 	// MARK: - Table View

@@ -11,6 +11,7 @@ import UIKit
 class NewsClass: UIViewController {
 	
 	let requestManager = RequestManager()
+	var selectedCell: Int?
 	
 	func getActualNews(newsTableView: UITableView, newsType: String) {
 		print("news: \(newsType)")
@@ -23,6 +24,13 @@ class NewsClass: UIViewController {
 					newsTableView.reloadData()
 				}
 			}
+		}
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowCellDetails" {
+			let destination = segue.destination as! ArticleController
+			destination.articleNumber = selectedCell
 		}
 	}
 	

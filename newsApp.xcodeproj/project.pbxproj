@@ -118,9 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				A6C8C3A6235C8FFE00FDF583 /* EmailedController.swift */,
-				A6C650FB235D9620008FF41B /* ArticleController.swift */,
 				A6CD67F4235CA605000B7E6A /* SharedController.swift */,
 				A6CD67F7235CA62E000B7E6A /* ViewedController.swift */,
+				A6C650FB235D9620008FF41B /* ArticleController.swift */,
 				A6C650F9235D914E008FF41B /* NewsClass.swift */,
 			);
 			path = Controllers;

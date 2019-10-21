@@ -14,7 +14,6 @@ class SharedController: NewsClass, UITableViewDataSource, UITableViewDelegate {
 	@IBOutlet weak var newsTableView: UITableView!
 	
 	let currentNewsType = "shared"
-	var selectedCell: Int?
 	var context: NSManagedObjectContext?
 	
 	override func viewDidLoad() {
@@ -24,13 +23,6 @@ class SharedController: NewsClass, UITableViewDataSource, UITableViewDelegate {
 		getActualNews(newsTableView: newsTableView, newsType: currentNewsType)
 	}
 	
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "ShowCellDetails" {
-			let destination = segue.destination as! ArticleController
-			destination.articleNumber = selectedCell
-		}
-	}
 	
 	// MARK: - Table View
 	
