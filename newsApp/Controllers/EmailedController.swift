@@ -49,11 +49,13 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 		return true
 	}
 	
-//	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//		let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
-//
-//		}
-//		let swipeAction = UISwipeActionsConfiguration(actions: )
-//	}
+	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
+			
+			print("pressed action favourite")
+		}
+		let swipeAction = UISwipeActionsConfiguration(actions: [contextAction])
+		return swipeAction
+	}
 }
 
