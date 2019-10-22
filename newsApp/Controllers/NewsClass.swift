@@ -28,9 +28,9 @@ class NewsClass: UIViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "ShowCellDetails" {
+		if segue.identifier == "ShowArticleDetails" {
 			let destination = segue.destination as! ArticleController
-			destination.articleNumber = selectedCell
+			destination.newsUrl = URL(string: articles[selectedCell!].url)
 		}
 	}
 	

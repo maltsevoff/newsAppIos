@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A6C650FA235D914E008FF41B /* NewsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C650F9235D914E008FF41B /* NewsClass.swift */; };
-		A6C650FC235D9620008FF41B /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C650FB235D9620008FF41B /* ArticleController.swift */; };
 		A6C650FF235D9D2A008FF41B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C650FE235D9D2A008FF41B /* ImageCell.swift */; };
+		A6C65101235F7793008FF41B /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C65100235F7793008FF41B /* ArticleController.swift */; };
 		A6C8C3A3235C8FFE00FDF583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3A2235C8FFE00FDF583 /* AppDelegate.swift */; };
 		A6C8C3A5235C8FFE00FDF583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3A4235C8FFE00FDF583 /* SceneDelegate.swift */; };
 		A6C8C3A7235C8FFE00FDF583 /* EmailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3A6235C8FFE00FDF583 /* EmailedController.swift */; };
@@ -31,8 +31,8 @@
 		2A8DF9CC6FF6EE51505F7ACC /* Pods_newsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D398933718A1A0893661348 /* Pods-newsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsApp.release.xcconfig"; path = "Target Support Files/Pods-newsApp/Pods-newsApp.release.xcconfig"; sourceTree = "<group>"; };
 		A6C650F9235D914E008FF41B /* NewsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsClass.swift; sourceTree = "<group>"; };
-		A6C650FB235D9620008FF41B /* ArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		A6C650FE235D9D2A008FF41B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		A6C65100235F7793008FF41B /* ArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		A6C8C39F235C8FFE00FDF583 /* newsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C8C3A2235C8FFE00FDF583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C8C3A4235C8FFE00FDF583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				A6C8C3A6235C8FFE00FDF583 /* EmailedController.swift */,
 				A6CD67F4235CA605000B7E6A /* SharedController.swift */,
 				A6CD67F7235CA62E000B7E6A /* ViewedController.swift */,
-				A6C650FB235D9620008FF41B /* ArticleController.swift */,
+				A6C65100235F7793008FF41B /* ArticleController.swift */,
 				A6C650F9235D914E008FF41B /* NewsClass.swift */,
 			);
 			path = Controllers;
@@ -252,13 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6C65101235F7793008FF41B /* ArticleController.swift in Sources */,
 				A6C8C3BE235C937200FDF583 /* Model.swift in Sources */,
 				A6CD67F8235CA62E000B7E6A /* ViewedController.swift in Sources */,
 				A6C8C3A7235C8FFE00FDF583 /* EmailedController.swift in Sources */,
 				A6C8C3A3235C8FFE00FDF583 /* AppDelegate.swift in Sources */,
 				A6C650FA235D914E008FF41B /* NewsClass.swift in Sources */,
 				A6C8C3AD235C8FFE00FDF583 /* newsApp.xcdatamodeld in Sources */,
-				A6C650FC235D9620008FF41B /* ArticleController.swift in Sources */,
 				A6CD67F5235CA605000B7E6A /* SharedController.swift in Sources */,
 				A6C8C3BC235C935900FDF583 /* RequestManager.swift in Sources */,
 				A6C8C3A5235C8FFE00FDF583 /* SceneDelegate.swift in Sources */,

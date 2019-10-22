@@ -37,7 +37,9 @@ class RequestManager {
 			let imageUrl = imageUrlData[0] ?? ""
 			let published = element["published_date"].string ?? "no date"
 			let source = element["source"].string ?? "no source"
-			let arrayNode = News(title: title, imageUrl: imageUrl, publishedDate: published, source: source, articleData: element)
+			let uri = element["uri"].stringValue
+			let url = element["url"].stringValue
+			let arrayNode = News(title: title, imageUrl: imageUrl, publishedDate: published, source: source, uri: uri, url: url, articleData: element)
 			resArray.append(arrayNode)
 		}
 		return resArray

@@ -42,7 +42,11 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print(indexPath.row)
 		selectedCell = indexPath.row
-		performSegue(withIdentifier: "ShowCellDetails", sender: nil)
+		performSegue(withIdentifier: "ShowArticleDetails", sender: nil)
+//		let urlString = articles[indexPath.row].url
+//		if let url = URL(string: urlString) {
+//			UIApplication.shared.open(url)
+//		}
 	}
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -51,9 +55,8 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let contextAction = UIContextualAction(style: .normal, title: "Favourite") { (contextualAction, view, boolValue) in
-			let favouriteCell = articles[indexPath.row]
-			favouriteArticles.append(favouriteCell)
-			print("pressed action favourite", favouriteArticles)
+			print("pressed action favourite")
+			saveFavourites(article: articles[indexPath.row])
 		}
 		let swipeAction = UISwipeActionsConfiguration(actions: [contextAction])
 		return swipeAction

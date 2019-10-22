@@ -8,12 +8,15 @@
 
 import UIKit
 import SwiftyJSON
+import CoreData
 
 struct News {
 	var title: String
 	var imageUrl: String
 	var publishedDate: String
 	var source: String
+	var uri: String
+	var url: String
 	var articleData: JSON
 }
 
@@ -30,4 +33,20 @@ func imagesForArticle(index: Int) -> [String] {
 		images.append(imgUrl)
 	}
 	return images
+}
+
+func saveFavourites(article: News) {
+	if articles.contains(where: { object in
+		return object.uri == article.uri
+	}) {
+		return
+	}
+	let coreDataStack = CoreDataStack()
+	let context = coreDataStack.persistentContainer.viewContext
+	let entity = NSEntityDescription.entity(forEntityName: "Article", in: context)
+	let articleObject = NSManagedObject(entity: entity!, insertInto: context) as! Article
+	articleObject.url = article.url
+	articleObject.title = article.title
+	articleObject.image = article.imageUrl
+	articleObject.publishDate = article.publishedDate
 }
