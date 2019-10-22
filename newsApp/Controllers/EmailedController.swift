@@ -43,10 +43,6 @@ class EmailedController: NewsClass, UITableViewDelegate, UITableViewDataSource {
 		print(indexPath.row)
 		selectedCell = indexPath.row
 		performSegue(withIdentifier: "ShowArticleDetails", sender: nil)
-//		let urlString = articles[indexPath.row].url
-//		if let url = URL(string: urlString) {
-//			UIApplication.shared.open(url)
-//		}
 	}
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

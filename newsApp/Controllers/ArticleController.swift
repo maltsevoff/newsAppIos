@@ -27,8 +27,4 @@ class ArticleController: UIViewController, WKUIDelegate {
 		let myRequest = URLRequest(url: newsUrl!)
 		webView.load(myRequest)
 	}
-	
-	func showActivityIndicator() {
-		
-	}
 }
