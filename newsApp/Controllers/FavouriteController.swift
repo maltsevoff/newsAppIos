@@ -39,6 +39,26 @@ class FavouriteController: UIViewController, UITableViewDelegate, UITableViewDat
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return true
+	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		guard let personToDelete = favouriteArticles[indexPath.row] as? Article, editingStyle == .delete else {
+			return
+		}
+		context?.delete(personToDelete)
+		
+		do {
+			try context?.save()
+			favouriteArticles.remove(at: indexPath.row)
+			tableView.deleteRows(at: [indexPath], with: .automatic)
+		} catch let error as NSError {
+			print("Error: \(error), description \(error.userInfo)")
+		}
+	}
+
+	
 	func deleteData() {
 		let request: NSFetchRequest<Article> = Article.fetchRequest()
 		do {
@@ -52,5 +72,7 @@ class FavouriteController: UIViewController, UITableViewDelegate, UITableViewDat
 			print(error.localizedDescription)
 		}
 	}
+	
+	
 	
 }
