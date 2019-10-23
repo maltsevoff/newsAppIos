@@ -5,9 +5,10 @@
         <attribute name="publishDate" optional="YES" attributeType="String"/>
         <attribute name="source" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="uri" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Article" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Article" positionX="-63" positionY="-18" width="128" height="133"/>
     </elements>
 </model>

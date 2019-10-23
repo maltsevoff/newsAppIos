@@ -38,11 +38,10 @@ func imagesForArticle(index: Int) -> [String] {
 }
 
 func saveFavourites(article: News) {
-//	if articles.contains(where: { object in
-//		return object.uri == article.uri
-//	}) {
-//		return
-//	}
+	print("article uri:", article.uri)
+	if favouriteArticles.contains(where: {$0.uri == article.uri}) {
+		return
+	}
 	let entity = NSEntityDescription.entity(forEntityName: "Article", in: context!)
 	let articleObject = NSManagedObject(entity: entity!, insertInto: context) as! Article
 	articleObject.url = article.url
@@ -50,6 +49,7 @@ func saveFavourites(article: News) {
 	articleObject.image = article.imageUrl
 	articleObject.publishDate = article.publishedDate
 	articleObject.source = article.source
+	articleObject.uri = article.uri
 	do {
 		try context?.save()
 		favouriteArticles.append(articleObject)
