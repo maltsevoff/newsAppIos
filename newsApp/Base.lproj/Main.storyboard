@@ -91,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Emailed" id="CYN-pq-8kE"/>
+                    <tabBarItem key="tabBarItem" title="Emailed" image="emailed" id="CYN-pq-8kE"/>
                     <connections>
                         <outlet property="newsTableView" destination="52V-B8-AlM" id="f4i-n8-UAR"/>
                         <segue destination="3e4-bQ-q3P" kind="show" identifier="ShowArticleDetails" id="yLZ-HR-paa"/>
@@ -222,7 +222,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JWg-rD-m5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shared" id="2gy-Kk-7S5"/>
+                    <tabBarItem key="tabBarItem" title="Shared" image="shared" id="2gy-Kk-7S5"/>
                     <connections>
                         <outlet property="newsTableView" destination="qlg-1B-Jmk" id="tCe-To-fd5"/>
                         <segue destination="3e4-bQ-q3P" kind="show" identifier="ShowArticleDetails" id="Odd-kF-fd3"/>
@@ -316,7 +316,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MGU-NX-qcb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourite" id="pGU-hF-rHY"/>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="favourite" id="pGU-hF-rHY"/>
                     <connections>
                         <outlet property="favouriteTableView" destination="m4i-ut-sea" id="slo-5m-6ip"/>
                         <segue destination="3e4-bQ-q3P" kind="show" identifier="ShowArticleDetails" id="uHQ-Od-cDa"/>
@@ -410,7 +410,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="69e-rf-DEw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Viewed" id="VsX-dE-XzY"/>
+                    <tabBarItem key="tabBarItem" title="Viewed" image="viewed" id="VsX-dE-XzY"/>
                     <connections>
                         <outlet property="newsTableView" destination="pt9-Xn-fx4" id="Yay-ka-pUj"/>
                         <segue destination="3e4-bQ-q3P" kind="show" identifier="ShowArticleDetails" id="rWc-UU-IpH"/>
@@ -421,6 +421,12 @@
             <point key="canvasLocation" x="1212" y="840"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="emailed" width="32" height="32"/>
+        <image name="favourite" width="32" height="32"/>
+        <image name="shared" width="32" height="32"/>
+        <image name="viewed" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uHQ-Od-cDa"/>
     </inferredMetricsTieBreakers>
