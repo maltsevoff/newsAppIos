@@ -24,6 +24,21 @@ class FavouriteController: UIViewController, UITableViewDelegate, UITableViewDat
 		print("appear", favouriteArticles)
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowArticleDetails" {
+			let destination = segue.destination as! ArticleController
+			destination.newsUrl = URL(string: favouriteArticles[selectedCell!].url ?? "")
+		}
+	}
+	
+	//MARK: - Table View
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		print(indexPath.row)
+		selectedCell = indexPath.row
+		performSegue(withIdentifier: "ShowArticleDetails", sender: nil)
+	}
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		print("counted", favouriteArticles.count)
 		return favouriteArticles.count

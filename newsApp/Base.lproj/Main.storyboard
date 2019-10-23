@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wy-Rc-ZbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="-242"/>
+            <point key="canvasLocation" x="2817" y="510"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vLF-Uq-7U2">
@@ -319,11 +319,12 @@
                     <tabBarItem key="tabBarItem" title="Favourite" id="pGU-hF-rHY"/>
                     <connections>
                         <outlet property="favouriteTableView" destination="m4i-ut-sea" id="slo-5m-6ip"/>
+                        <segue destination="3e4-bQ-q3P" kind="show" identifier="ShowArticleDetails" id="uHQ-Od-cDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKf-93-xNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-356" y="1038"/>
+            <point key="canvasLocation" x="1212" y="1617"/>
         </scene>
         <!--Viewed-->
         <scene sceneID="YsL-9j-LNb">
@@ -421,6 +422,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rWc-UU-IpH"/>
+        <segue reference="uHQ-Od-cDa"/>
     </inferredMetricsTieBreakers>
 </document>
