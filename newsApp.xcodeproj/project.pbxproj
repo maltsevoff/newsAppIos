@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A6C650FA235D914E008FF41B /* NewsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C650F9235D914E008FF41B /* NewsClass.swift */; };
-		A6C650FF235D9D2A008FF41B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C650FE235D9D2A008FF41B /* ImageCell.swift */; };
 		A6C65101235F7793008FF41B /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C65100235F7793008FF41B /* ArticleController.swift */; };
 		A6C65103235F90A9008FF41B /* FavouriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C65102235F90A9008FF41B /* FavouriteController.swift */; };
 		A6C8C3A3235C8FFE00FDF583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8C3A2235C8FFE00FDF583 /* AppDelegate.swift */; };
@@ -32,7 +31,6 @@
 		2A8DF9CC6FF6EE51505F7ACC /* Pods_newsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D398933718A1A0893661348 /* Pods-newsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsApp.release.xcconfig"; path = "Target Support Files/Pods-newsApp/Pods-newsApp.release.xcconfig"; sourceTree = "<group>"; };
 		A6C650F9235D914E008FF41B /* NewsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsClass.swift; sourceTree = "<group>"; };
-		A6C650FE235D9D2A008FF41B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		A6C65100235F7793008FF41B /* ArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		A6C65102235F90A9008FF41B /* FavouriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteController.swift; sourceTree = "<group>"; };
 		A6C8C39F235C8FFE00FDF583 /* newsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				A6C8C3B9235C921F00FDF583 /* NewsCell.swift */,
-				A6C650FE235D9D2A008FF41B /* ImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -267,7 +264,6 @@
 				A6C8C3A5235C8FFE00FDF583 /* SceneDelegate.swift in Sources */,
 				A6C8C3BA235C921F00FDF583 /* NewsCell.swift in Sources */,
 				A6C8C3C0235C947F00FDF583 /* CoreDataStack.swift in Sources */,
-				A6C650FF235D9D2A008FF41B /* ImageCell.swift in Sources */,
 				A6C65103235F90A9008FF41B /* FavouriteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

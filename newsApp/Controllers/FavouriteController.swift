@@ -72,22 +72,5 @@ class FavouriteController: UIViewController, UITableViewDelegate, UITableViewDat
 			print("Error: \(error), description \(error.userInfo)")
 		}
 	}
-
-	
-	func deleteData() {
-		let request: NSFetchRequest<Article> = Article.fetchRequest()
-		do {
-			let people: [Article] = try (context?.fetch(request))!
-			
-			for person in people {
-				context?.delete(person)
-			}
-			try context?.save()
-		} catch {
-			print(error.localizedDescription)
-		}
-	}
-	
-	
 	
 }
