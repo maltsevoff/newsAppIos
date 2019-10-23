@@ -21,7 +21,9 @@ struct News {
 }
 
 var articles: [News] = []
-var favouriteArticles: [News] = []
+var favouriteArticles: [Article] = []
+var selectedCell: Int?
+var context: NSManagedObjectContext?
 
 func imagesForArticle(index: Int) -> [String] {
 	var images: [String] = []
@@ -36,17 +38,33 @@ func imagesForArticle(index: Int) -> [String] {
 }
 
 func saveFavourites(article: News) {
-	if articles.contains(where: { object in
-		return object.uri == article.uri
-	}) {
-		return
-	}
-	let coreDataStack = CoreDataStack()
-	let context = coreDataStack.persistentContainer.viewContext
-	let entity = NSEntityDescription.entity(forEntityName: "Article", in: context)
+//	if articles.contains(where: { object in
+//		return object.uri == article.uri
+//	}) {
+//		return
+//	}
+	let entity = NSEntityDescription.entity(forEntityName: "Article", in: context!)
 	let articleObject = NSManagedObject(entity: entity!, insertInto: context) as! Article
 	articleObject.url = article.url
 	articleObject.title = article.title
 	articleObject.image = article.imageUrl
 	articleObject.publishDate = article.publishedDate
+	articleObject.source = article.source
+	do {
+		try context?.save()
+		favouriteArticles.append(articleObject)
+	} catch {
+		print(error.localizedDescription)
+	}
+}
+
+func getFavouriteArticles() -> [Article] {
+	let request: NSFetchRequest<Article> = Article.fetchRequest()
+	do {
+		let favArticles: [Article] = try (context?.fetch(request))!
+		return favArticles
+	} catch {
+		print(error.localizedDescription)
+		return []
+	}
 }
