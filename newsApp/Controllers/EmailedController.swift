@@ -16,8 +16,8 @@ class EmailedController: NewsClass {
 	let currentNewsType = "emailed"
 	var context: NSManagedObjectContext?
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		
 		getActualNews(newsTableView: newsTableView, newsType: currentNewsType)
 	}

@@ -16,10 +16,9 @@ class SharedController: NewsClass {
 	let currentNewsType = "shared"
 	var context: NSManagedObjectContext?
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		
-		navigationItem.title = "News"
 		getActualNews(newsTableView: newsTableView, newsType: currentNewsType)
 	}
 }
